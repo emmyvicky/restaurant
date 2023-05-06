@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task5-3.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>leave a response</title>
+</head>
+<body>
+    <form class="container feedback">
+    <div class="row mb-3">
+        <label for="colFormLabelSm" class=" col-sm-2 col-form-label"></label>
+       <div class="col-sm-10 input-group">
+   <span class=" col-sm-2">name</span>
+   <input type="text"  class=" col-sm-2 form-control" id="colFormLabelSm" placeholder="Firstname">
+   <!-- <span class="Surname">Surname</span> -->
+   <input type="text"  class=" col-sm-2 form-control" id="colFormLabelSm" placeholder="Surname">
+ </div>
+ </div>
+ <div class="row mb-3">
+   <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Phone Number</label>
+   <div class="col-sm-10">
+     <input type="Numbers" class="form-control form-control" id="colFormLabelSm" placeholder="+61 xxxx xxx xxx">
+   </div>
+ </div>
+ <div class="row mb-3">
+   <label for="colFormLabel" class="col-sm-2 form-label">Email</label>
+   <div class="col-sm-10">
+     <input type="email" class="form-control" id="FormLabel" placeholder="Enter Email">
+   </div>
+ </div>
+ <div class="row mb-3">
+   <label for="colFormLabel" class="col-sm-2 form-label">item bought</label>
+   <div class="col-sm-10">
+     <input type="text" class="form-control" id="colFormLabel" placeholder="please select a pizza type...">
+   </div>
+ </div><br>
+        <div class="mb-3 leave a reply">
+            <label for="validationTextarea" class="form-label"></label>
+            <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Feedback" required></textarea>
+            <div class="invalid-feedback">
+              Please enter a message.
+            </div>
+          </div>
+        <div class="col-12">
+          <button class="btn btn-primary " type="submit">Submit form</button>
+        </div>
+      </form>
+</body>
+</html>

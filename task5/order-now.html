@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task5-3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>task 5</title>
+</head>
+<body>
+  <form method="post" class="container" name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    <div class="order-now">
+<h1> VIT BIC DELIVERIES</h1>
+<p>Delicious delicacies delivered hot and fresh to your doorstep</p>
+<p>Please complete the order form below.As soon as we recieve 
+your order we will start cooking to ensure we get your food delivered as soon as we can!</p>
+<h2>ORDER FORM</h2>
+<H5>Customer Details</H5><br>
+<div class="row mb-3">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Name</label>
+  <div class="col-sm-10">
+    <input type="Name" class="form-control form-control" id="colFormLabelSm" placeholder="First and lastname" required>
+  </div>
+  </div>
+<div class="row mb-3">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Phone Number</label>
+  <div class="col-sm-10">
+    <input type="Number" class="form-control form-control" id="colFormLabelSm" placeholder="+61 xxxx xxx xxx" required>
+  </div>
+</div>
+<div class="row mb-3">
+  <label for="colFormLabel" class="col-sm-2 form-label">Email</label>
+  <div class="col-sm-10">
+    <input type="email" class="form-control" id="FormLabel" placeholder="Enter Email"required>
+  </div>
+</div>
+<div class="row mb-3">
+  <label for="colFormLabel" class="col-sm-2 form-label">Pizza Type</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" id="colFormLabel" placeholder="please select a pizza type..."required>
+  </div>
+</div><br>
+<div class="row mb-3">
+  <div class="col">
+  <label for="pizza size" class="col-form-label">Select a size</label></div>
+<div class="col-sm-10 mx-auto p-30">
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">Extra large</label>
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">large</label>
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">Medium</label>
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">Small</label>
+</div><br><br> 
+  <div class="row">
+  <div class="col">
+  <label for="colFormLabel" class=" form-label">Special Requests</label></div>
+  <div class="col-sm-10 mx-auto">
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">Extra cheess</label>
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">Roast garlic</label>
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">Thick crust</label>
+  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  <label class="form-check-label" for="exampleCheck1">No chilli</label>
+</div>
+</div><br>
+   <label for="delivery address" class="col-sm-2 form-label">Number of pizza</label>
+      <div class="col-sm-10 mx-auto">
+        <input type="number"  id="numb" class="form-control form-control" id="colFormLabel" placeholder="1">
+        <p id="disp"></p>
+      </div><br>
+    <h5>Delivery Details</h5><br>
+    <!-- <div class="row"> -->
+      <label for="delivery address" class="col-sm-2 form-label">delivery address</label>
+      <div class="col-sm-10 mx-auto">
+        <input type="text" class="form-control form-control" id="colFormLabel" placeholder="Number and street Name" required>
+      </div><br><br>
+       <label for="Suburb" class="col-sm-2 form-label"></label>
+      <div class="col-sm-10 mx-auto">
+        <input type="text" class="form-control form-control" id="colFormLabel" placeholder="Suburb">
+      </div><br><br>
+        <div class="row mb-3">
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label">When to deliver</label>
+      <div class="col-sm-10">
+        <div class='input-group date' id='datetimepicker1'>
+                     <input type='text' class="form-control" />
+                     <span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                     </span></div><br><br>
+      <div class="mx-auto" style="width: 720px">
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+    </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">sign up for dkin pizza newsletter</label>
+  </div><br>
+  <div>
+  <button type="submit" id="submit" name="submit" class="btn btn-primary"
+  onclick="document.getElementById('submit').style.color = 'red'">Submit</button>
+  <button type="reset" name="reset" class="btn btn-primary">Reset</button>
+  </div>
+  </div>
+</form>
+<div><br>
+<footer class="border-top">
+  &copy;2023 vit bit with pride!
+</footer>
+</div>
+
+<script>
+  function validateForm() {
+    let forms = document.forms["myForm"]["fname"].value;
+    if (forms == "") {
+      alert("form must be filled out");
+      return false;
+    }
+  }
+  function myFunction() {
+  let x = document.getElementById("numb").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("disp").innerHTML = text;
+}
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

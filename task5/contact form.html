@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task5-3.css">
+    <title>contact us</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="card-body">
+                <form id="contact-form">
+                    <label for="name">Name:</label> <br>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error" id="name-error"></span> <br><br />
+                    <label for="email">Email:</label> <br>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="email-error"></span>
+                     <br><br />
+                    <label for="phone">Phone:</label> <br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="phone number" required>
+                    <span class="error" id="phone-error"></span>
+                    <br><br />
+                    <label for="query">Comments:</label> <br>
+                    <textarea id="query" name="query" required></textarea> 
+                    <span class="error" id="query-error"></span>
+                    <br><br />
+                    <button class="contact-btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+   <script>
+    
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+    
+      const nameField = document.querySelector("#name");
+    const emailField = document.querySelector("#email");
+    const phoneField = document.querySelector("#phone");
+    const queryField = document.querySelector("#query");
+    
+      // Validate the form fields
+      if (!nameField.value) {
+        document.querySelector("#name-error").textContent =
+          "Please enter your name.";
+      } else {
+        document.querySelector("#name-error").textContent = "";
+      }
+    
+      if (!emailField.value) {
+        document.querySelector("#email-error").textContent =
+          "Please enter your email.";
+      } else {
+        document.querySelector("#email-error").textContent = "";
+      }
+    
+      if (!phoneField.value) {
+        document.querySelector("#phone-error").textContent =
+          "Please enter your phone number.";
+      } else {
+        document.querySelector("#phone-error").textContent = "";
+      }
+    
+      if (!queryField.value) {
+        document.querySelector("#query-error").textContent =
+          "Please enter your query.";
+      } else {
+        document.querySelector("#query-error").textContent = "";
+      }
+    
+      // Submit the form if all fields are valid
+      if (
+        nameField.value &&
+        emailField.value &&
+        phoneField.value &&
+        queryField.value
+      ) {
+        alert("Thank you for submitting the form!");
+        form.reset();
+      }
+    });
+    
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Nunito:wght@600&display=swap");
+
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+
+
+nav {
+  animation: nav-load var(--nav-load-time) ease-in;
+  animation-name: nav-load 300ms ease-in;
+}
+
+nav ul{
+  margin: 0;
+  display: flex;
+}
+nav li{
+  list-style: none;
+  margin: 0 10px;
+  padding: 10px;
+  animation-name: nav-link-load;
+  animation-duration: var(--nav-link-load-time);
+  animation-timing-function: ease-in;
+  animation-delay: var(--nav-load-time);
+  animation-fill-mode: forwards;
+  transform: scale(0);
+
+}
+
+nav li:hover{
+  background-color: azure;
+}
+nav a{
+  color: white;
+  text-decoration: none;
+}
+.services{
+  max-height: fit-content;
+  font-size: medium;
+}
+
+.my-slides{
+  width: 50%;
+  max-height: 100vh;
+  background-color: aqua;
+  
+}
+
+.my-slides .pic1{
+  width: 50%;
+  height: 300px;
+}
+
+.my-slides .pic2{
+  width: 50%;
+  height: 300px;
+}
+
+.my-slides .pic3{
+  width: 50%;
+  height: 300px;
+}
+
+nav{
+ 
+    background: aqua;
+    position: relative;
+    animation-name: nav;
+    animation-duration: 5s;  
+    animation-fill-mode: unset;
+  }
+  
+  @keyframes nav {
+    from {top: 0px;}
+    to {top: 20px; background-color: blue;}
+  }
+
+  h3{
+    position: relative;
+    animation-name: h3;
+    animation-duration: 5s; 
+    animation-delay: 3s; 
+    animation-fill-mode: unset;
+  }
+  
+  @keyframes h3 {
+    from {top: 0px;}
+    to {top: 20px;
+    color: aliceblue;}
+  }
+
+  h1{
+    position: relative;
+    animation-name: h1;
+    animation-duration: 5s;  
+    animation-fill-mode: unset;
+  }
+  
+  @keyframes h1 {
+    from {top: 0px;}
+    to {top: 20px;
+    color: aliceblue;
+  font-size: larger;}
+  }
+
+.food-section{
+  display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    animation: fade-in 6s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  @keyframes nav-link-load {
+    0% { transform: scale(0); }
+    90%{ transform: scale(1.1);}
+    100% { transform: scale(1); }
+  }
+
+  
+  @keyframes nav-load {
+    0% { transform: translatey(-100%); }
+    100% { transform: translatey(0); }
+  }
+  
+
+  @keyframes nav-link-load {
+    0% { transform: scale(0); }
+    90%{ transform: scale(1.1);}
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes nav-link-load {
+    0% { transform: scale(0); }
+    90%{ transform: scale(1.1);}
+    100% { transform: scale(1); }
+  }
+
+  
+   @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  } 
+
+.food-section .food1{
+  width: 70%;
+  height: auto;
+  font-size: medium;
+
+}
+.food-section .food2{
+  width: 60%;
+  height: 600px;
+}
+.Menu .menu-list{
+  font-size: medium;
+    font-family: Arial;
+    font-size: 20px;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+
+  /* aboutus html file */
+  .aboutus{
+    background-color: aqua;
+  }
+
+  /* feedback form */
+  .feedback{
+    background-color: aqua;
+    padding-top: 20px;
+  }
+ .home-section{
+  padding: 50px;
+  background-color: blueviolet;
+  color: black;
+ }
+.our-services{
+  font-size: larger;
+  text-align: center;
+  padding: 30px;
+}
+.our-services .pic4{
+  width: 50%;
+  height: 300px;
+} 
+.our-services .pic5{
+  width: 50%;
+  height: 300px;
+}
+.our-services .pic6{
+  width: 50%;
+  height: 300px;
+}
+.our-strengths{
+ text-align: center;
+}
+.About-us{
+  background-color: rgb(14, 175, 135);
+  max-height: fit-content;
+}
+.our-mission {
+  /* background-color: blue; */
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* for tablets and mobile */
+   navbar {
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    max-height: 240px;
+  }
+}
+  @media only screen and (min-width: 400px) {
+    /* for tablets and mobile */
+     .food-section {
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+  @media only screen and (min-width: 400px) {
+    /* for tablets and mobile */
+    .our-services {
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+    
+@media only screen and (max-width: 600px) {
+  /* for tablets and mobile */
+   .our-strengths {
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  } 
+}
